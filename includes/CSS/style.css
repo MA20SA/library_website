@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.headerDiv {
+    background-image: url("../../imagesOfWebsite/many-books.jpg");
+    background-color: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+    background-blend-mode: darken;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.headerDiv h1{
+    text-shadow: 1px 1px 1px gray;
+    position: relative;
+    bottom: 5px;
+}
+
+.headerDiv nav a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #f5f5f5;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+    bottom: 10px;
+}
+
+.FooterDiv{
+    background-color: rgba(250, 235, 215, 0.815);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.BooksCardsView {
+    width: 85%;
+    /* border: 1pxs solid red !important; */
+    margin: auto; /* Centers the container horizontally افقياً*/
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow the cards to wrap (onto new lines when necessary) on smaller screens */
+    gap: 20px;
+}
+
+.OneBookCard {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 30%; 
+    border: 1px solid #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Makes sure content inside card stacks vertically عمودياً */
+    
+    /* ease : which means the transition will start slow, speed up in the middle, and slow down at the end. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+
+}
+.OneBookCard:hover {
+    transform: translateY(-10px); /* Lifts the card when hovered (above للاعلى)*/
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.15); /* Adds a more pronounced shadow */
+    cursor: pointer;
+}
+
+.imgOfCard{
+    width: 70%;
+    height: 235px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    margin: 5px auto 10px; /* Centers image and adds space above and below */
+}
+
+.OneBookCard p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+.OneBookCard span {
+    font-size: 14px;
+    margin: 0 0 5px;
+    color: #666; /* Lighter text for secondary information */
+}
+
+/* quantity */
+.OneBookCard p:last-child {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+    width: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+form{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="number"], input[type="date"],select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+input[type="file"]{
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Make the cards responsive for smaller screens */
+@media (max-width: 768px) {
+    .OneBookCard {
+        width: 45%; /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .OneBookCard {
+        width: 100%; /* 1 card per row on small screens */
+    }   
+}
