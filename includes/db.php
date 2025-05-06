@@ -1,13 +1,6 @@
 <?php
 
-// $conn = mysqli_connect('localhost','root','','library');
-
-$servername = "sql12.freesqldatabase.com"; 
-$username = "sql12777177";  
-$password = "DxMyqIPFU7";   
-$dbname = "sql12777177";    
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect('localhost','root','','library');
 
 // when $conn = false(there's error) this block happend --> !F = T
 if(!$conn){
