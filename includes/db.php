@@ -7,7 +7,7 @@ $username = "sql12777177";
 $password = "DxMyqIPFU7";   
 $dbname = "sql12777177";    
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // when $conn = false(there's error) this block happend --> !F = T
 if(!$conn){
